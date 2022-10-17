@@ -1,22 +1,12 @@
-const btn = document.querySelector('#btn');
-const table = document.querySelector('#table');
-const itemInput = document.querySelector('#item');
 
-document.title = "Title Changed";
+const items = document.getElementsByClassName('list-group-item');
 
-const title = document.querySelector('#title');
-title.style.borderBottom = 'solid 3px #000'
 
-btn.addEventListener('click', (e)=>onSubmit(e));
+console.log(items)
 
-function onSubmit(e){
-    e.preventDefault();
-    const tr = document.createElement('tr');
-    tr.innerHTML = `<td>${itemInput.value}</td>`;
-    console.log(tr)
-    table.appendChild(tr);
+items[2].style.backgroundColor = 'green';
+
+
+for(let i=0;i<4;i++){
+    items[i].style.fontWeight = "bold";
 }
-
-const head = document.getElementById('head');
-head.style.fontWeight = '900';
-head.style.color = 'green';
